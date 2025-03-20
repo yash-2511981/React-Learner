@@ -37,7 +37,7 @@ export default class App extends Component {
         <Navbar title="Abhitak" togglemode={this.togglemode} state={this.state}/>
         <div className="container">
           <Slider first="Taza Khabar Har Pal" second="Grab a latest news here" state={this.state}/>
-          <News state={this.state}/>
+          <News state={this.state} category="general"/>
         </div>
       </div>
     );

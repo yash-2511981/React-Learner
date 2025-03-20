@@ -3,7 +3,7 @@ import logo from "../logo.png";
 
 export default class Navbar extends Component {
   render() {
-    let {state} = this.props;
+    let { state } = this.props;
     console.log(state)
     return (
       <div>
@@ -12,8 +12,7 @@ export default class Navbar extends Component {
             <a className="navbar-brand" href="/">
               <img src={logo} alt="" height={"40px"} />
             </a>
-            <button
-              className="navbar-toggler d-lg-none"
+            <buttonc className="navbar-toggler d-lg-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapsibleNavId"
@@ -22,7 +21,7 @@ export default class Navbar extends Component {
               aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
-            </button>
+            </buttonc>
             <div className="collapse navbar-collapse" id="collapsibleNavId">
               <ul className="navbar-nav me-auto mt-2 mt-lg-0">
                 <li className="nav-item">
@@ -31,31 +30,14 @@ export default class Navbar extends Component {
                     <span className="visually-hidden">(current)</span>
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    Link
-                  </a>
-                </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="/"
-                    id="dropdownId"
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <div className="dropdown-menu" aria-labelledby="dropdownId">
-                    <a className="dropdown-item" href="/">
-                      Action 1
-                    </a>
-                    <a className="dropdown-item" href="/">
-                      Action 2
-                    </a>
-                  </div>
-                </li>
+                  <li className="nav-item"><a className="nav-link" href="/">business</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/">entertainment</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/">general</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/">health</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/">science</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/">sports</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/">technology</a></li>
+                
               </ul>
             </div>
           </div>
@@ -68,7 +50,7 @@ export default class Navbar extends Component {
                 id="flexSwitchCheckDefault"
                 onClick={this.props.togglemode}
               />
-              <label className="form-check-label"  htmlFor="flexSwitchCheckDefault">
+              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
                 Dark Mode</label>
             </div>
           </div>
