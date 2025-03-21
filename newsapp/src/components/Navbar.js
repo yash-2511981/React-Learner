@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "../logo.png";
+import {Link} from "react-router";
 
 export default class Navbar extends Component {
   render() {
@@ -30,14 +31,14 @@ export default class Navbar extends Component {
                     <span className="visually-hidden">(current)</span>
                   </a>
                 </li>
-                  <li className="nav-item"><a className="nav-link" href="/">business</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/">entertainment</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/">general</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/">health</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/">science</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/">sports</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/">technology</a></li>
-                
+                  <li className="nav-item"><Link className="nav-link" to="/">General</Link></li>
+                  <li className="nav-item"><Link className="nav-link" to="/business">Buisness</Link></li>
+                  <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
+                  <li className="nav-item"><Link className="nav-link" to="/health">Health</Link></li>
+                  <li className="nav-item"><Link className="nav-link" to="/science">Science</Link></li>
+                  <li className="nav-item"><Link className="nav-link" to="/sports">Sports</Link></li>
+                  <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>
+
               </ul>
             </div>
           </div>
