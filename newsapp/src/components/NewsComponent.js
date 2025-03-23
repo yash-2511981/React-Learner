@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class NewsComponent extends Component {
   render() {
-    const { author, title, description, image, url,state} = this.props;
+    const { author, title, description, image, url, state } = this.props;
     return (
       <div>
         <div className={`card bg-${state.bg} text-${state.color} shadow-lg`} style={{ width: "18rem" }}>
@@ -32,7 +32,7 @@ export default class NewsComponent extends Component {
                 WebkitBoxOrient: "vertical",
               }}
             >
-              {!title ? "Click on read to know more": title.slice(0,35)}...
+              {!title ? "Click on read to know more" : title.slice(0, 35)}...
             </h6>
             <p
               className="card-text"
@@ -46,9 +46,9 @@ export default class NewsComponent extends Component {
                 flex: "1",
               }}
             >
-              {!description ? "Click on read to know more":description.slice(0,50)}...
+              {!description ? "Click on read to know more" : description.slice(0, 50)}...
             </p>
-            <p className="text-end">-{!author ? "Unknown":author.slice(0,15)}</p>
+            <p className="text-end">-{!author ? "Unknown" : author.slice(0, 15)}</p>
             <a
               href={url}
               target="_blank"
