@@ -5,7 +5,6 @@ import {Link} from "react-router";
 export default class Navbar extends Component {
   render() {
     let { state } = this.props;
-    console.log(state)
     return (
       <div>
         <nav className={`navbar navbar-expand-sm navbar-${state.bg} bg-${state.bg}`}>
@@ -13,7 +12,7 @@ export default class Navbar extends Component {
             <a className="navbar-brand" href="/">
               <img src={logo} alt="" height={"40px"} />
             </a>
-            <buttonc className="navbar-toggler d-lg-none"
+            <button className="navbar-toggler d-lg-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapsibleNavId"
@@ -22,7 +21,7 @@ export default class Navbar extends Component {
               aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
-            </buttonc>
+            </button>
             <div className="collapse navbar-collapse" id="collapsibleNavId">
               <ul className="navbar-nav me-auto mt-2 mt-lg-0">
                 <li className="nav-item">

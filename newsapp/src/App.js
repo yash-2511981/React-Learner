@@ -15,9 +15,8 @@ export default class App extends Component {
       btn: "primary",
       color: "dark",
       loading: false,
-      progress:0,
+      progress: 0,
     }
-
   }
 
   togglemode = () => {
@@ -31,10 +30,11 @@ export default class App extends Component {
   componentDidUpdate() {
     console.log(this.state.bg)
     document.body.style.backgroundColor = this.state.bg === "dark" ? "#212529" : "white";
+    
   }
 
-  setProgress = (progress)=>{
-    this.setState({progress:progress})
+  setProgress = (progress) => {
+    this.setState({ progress: progress })
   }
 
   render() {
@@ -49,13 +49,13 @@ export default class App extends Component {
           <div className="container">
             <Slider first="Taza Khabar Har Pal" second="Grab a latest news here" state={this.state} />
             <Routes>
-              <Route path="/" element={<News  setProgress={this.setProgress}key="general" state={this.state} category="general" country="us" />} />
-              <Route path="/entertainment" element={<News  setProgress={this.setProgress}key="entertainment" state={this.state} category="entertainment" country="us" />} />
-              <Route path="/business" element={<News  setProgress={this.setProgress}key="business" state={this.state} category="business" country="us" />} />
-              <Route path="/health" element={<News  setProgress={this.setProgress}key="health" state={this.state} category="health" country="us" />} />
-              <Route path="/sports" element={<News  setProgress={this.setProgress}key="sports" state={this.state} category="sports" country="us" />} />
-              <Route path="/technology" element={<News  setProgress={this.setProgress}key="technology" state={this.state} category="technology" country="us" />} />
-              <Route path="/science" element={<News  setProgress={this.setProgress}key="science" state={this.state} category="science" country="us" />} />
+              <Route path="/" element={<News setProgress={this.setProgress}  key="general" state={this.state} category="general" country="us" />} />
+              <Route path="/entertainment" element={<News setProgress={this.setProgress}  key="entertainment" state={this.state} category="entertainment" country="us" />} />
+              <Route path="/business" element={<News setProgress={this.setProgress}  key="business" state={this.state} category="business" country="us" />} />
+              <Route path="/health" element={<News setProgress={this.setProgress}  key="health" state={this.state} category="health" country="us" />} />
+              <Route path="/sports" element={<News setProgress={this.setProgress}  key="sports" state={this.state} category="sports" country="us" />} />
+              <Route path="/technology" element={<News setProgress={this.setProgress}  key="technology" state={this.state} category="technology" country="us" />} />
+              <Route path="/science" element={<News setProgress={this.setProgress}  key="science" state={this.state} category="science" country="us" />} />
             </Routes>
           </div>
         </Router>
