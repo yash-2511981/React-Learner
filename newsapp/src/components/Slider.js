@@ -8,9 +8,9 @@ export default class Slider extends Component {
       <div>
         <div
           id="carouselExampleAutoplaying"
-          className={`carousel slide my-3 rounded shadow-lg p-3 bg-${state.bg} text-${state.color}`}
+          className={`carousel slide rounded shadow-lg p-3 bg-${state.bg} text-${state.color}`}
           data-bs-ride="carousel"
-          style={{height:"80px",width:"100%"}}
+          style={{height:"80px",width:"100%",marginTop:"100px"}}
         >
           <div className="carousel-inner">
             <div className="carousel-item active">

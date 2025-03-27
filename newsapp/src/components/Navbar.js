@@ -7,7 +7,7 @@ export default class Navbar extends Component {
     let { state } = this.props;
     return (
       <div>
-        <nav className={`navbar navbar-expand-sm navbar-${state.bg} bg-${state.bg}`}>
+        <nav className={`navbar fixed-top navbar-expand-sm navbar-${state.bg} bg-${state.bg}`}>
           <div className="container">
             <a className="navbar-brand" href="/">
               <img src={logo} alt="" height={"40px"} />
