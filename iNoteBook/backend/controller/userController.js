@@ -35,7 +35,7 @@ const register = async (req, res) => {
 
         //generating and sending autorization token to the user
         const data = {
-            userId: { id: user._id }
+            user: { id: user._id }
         }
         const token = jwt.sign(data, jwt_sign)
         res.json({ token })
@@ -47,6 +47,7 @@ const register = async (req, res) => {
 }
 
 
+//user login
 const login = async (req,res) => {
     try {
         //verifying validation
@@ -73,7 +74,7 @@ const login = async (req,res) => {
 
         //generating and sending autorization token to the user
         const data = {
-            userId: { id: user._id }
+            user: { id: user._id }
         }
         const token = jwt.sign(data, jwt_sign)
         res.json({ token })
@@ -82,4 +83,17 @@ const login = async (req,res) => {
         res.json({ message: "Internal server error" })
     }
 }
-module.exports = { register, login };
+
+//getting user info 
+const getUser = async (req,res) => {
+    try {
+        const id = req.user.id;
+        const user = await User.findById(id);
+        res.json({user});
+    }catch(error) {
+        console.log(error)
+        res.json({ message: "Internal server error" })
+    }
+}
+
+module.exports = { register, login,getUser};
