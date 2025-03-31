@@ -12,4 +12,8 @@ const loginValidationRules = [
     body('password').notEmpty().withMessage("invalid creadentials")
 ]
 
-module.exports = {registerValidationRules,loginValidationRules};
+const notesValidationRules =[
+    body('title').isEmpty().withMessage("title needed"),
+    body('content').isEmpty().withMessage("put a some content in it")
+]
+module.exports = {registerValidationRules,loginValidationRules,notesValidationRules};

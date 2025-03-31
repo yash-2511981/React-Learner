@@ -9,7 +9,6 @@ const fetchUser = async (req,res,next)=>{
         if(!token) return res.status(400).json({meg:"token is invalid"})
 
         const data = jwt.verify(token,jwt_sign);
-        console.log(data)
         req.user = data.user;
         next();
     } catch (error) {
