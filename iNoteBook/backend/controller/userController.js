@@ -37,7 +37,7 @@ const register = async (req, res) => {
         const data = {
             user: { id: user._id }
         }
-        const token = jwt.sign(data, jwt_sign)
+        const token = jwt.sign(data, jwt_sign,{expiresIn:"2h"});
         res.json({ token })
 
     } catch (error) {
@@ -76,7 +76,7 @@ const login = async (req,res) => {
         const data = {
             user: { id: user._id }
         }
-        const token = jwt.sign(data, jwt_sign)
+        const token = jwt.sign(data, jwt_sign,{expiresIn:"2h"});
         res.json({ token })
     } catch (error) {
         console.log(error)

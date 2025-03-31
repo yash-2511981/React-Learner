@@ -1,5 +1,3 @@
 npm install -g create-react-app (npm downloads the package so we can use that whenever we want without installing again,installs permenetly)
 
 npx create-react-app app_name(npx install package without downloading the package so if we want to use that package again we have install it again,install temporary for particular prohjects)
-
-

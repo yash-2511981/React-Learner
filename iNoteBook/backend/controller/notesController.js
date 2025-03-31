@@ -9,7 +9,7 @@ const createNote = async (req, res) => {
     const error = await validationResult(req);
 
     //if data doesnt passed the vlidation
-    if (error) return res.status(400).json({ error });
+    if (!error.isEmpty()) return res.status(400).json({ error });
 
     try {
         await Note.create({ title, tag, content, userId: req.user.id });
@@ -55,3 +55,5 @@ const deleteNotes = async (req,res)=>{
         
     }
 }
+
+module.exports = {getNotes,deleteNotes,updateNotes,createNote};

@@ -3,6 +3,8 @@ const jwt = require("jsonwebtoken");
 
 const jwt_sign = process.env.JWT_SECRETE;
 
+
+//setting up middleware to verify the user is logged in or not
 const fetchUser = async (req,res,next)=>{
     try {
         const token = req.header('auth-token');
