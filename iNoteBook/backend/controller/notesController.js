@@ -9,7 +9,7 @@ const getNotes = async (req, res) => {
         res.json({ notes });
     } catch (error) {
         console.log(error)
-        res.json({ message: "Internal server error" })
+        res.status(500).send({ message: "Internal server error" })
     }
 }
 
@@ -27,7 +27,7 @@ const createNote = async (req, res) => {
         res.status(200).json({ msg: "created successfully" })
     } catch (error) {
         console.log(error)
-        res.json({ message: "Internal server error" })
+        res.status(500).send({ message: "Internal server error" })
     }
 }
 
@@ -52,7 +52,7 @@ const updateNotes = async (req, res) => {
         res.status(200).json({ msg: "updated successfully" });
     } catch (error) {
         console.log(error)
-        res.json({ message: "Internal server error" })
+        res.status(500).send({ message: "Internal server error" })
     }
 }
 
@@ -65,14 +65,14 @@ const deleteNotes = async (req, res) => {
         //if note doesnt present in the database.
         if (!note) return res.status(400).send("not found")
 
-        //prevent notes updation from diffrent user
+        //prevent notes deletion from diffrent user
         if (note.userId.toString() !== req.user.id) return res.status(401).send("not found")
         
         await Note.findByIdAndDelete({ _id: req.params.id })
         res.status(200).json({ msg: "deleted successfully" });
     } catch (error) {
         console.log(error)
-        res.json({ message: "Internal server error" })
+        res.status(500).send({ message: "Internal server error" })
     }
 }
 

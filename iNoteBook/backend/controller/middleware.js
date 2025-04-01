@@ -15,7 +15,7 @@ const fetchUser = async (req,res,next)=>{
         next();
     } catch (error) {
         console.log(error);
-        res.status(500).json({meg:"internal server error"});
+        res.status(500).send({ message: "Internal server error" })
     }
 }
 
