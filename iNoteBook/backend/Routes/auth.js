@@ -12,3 +12,17 @@ router.post("/login",loginValidationRules,login);
 router.use("/user",fetchUser,notesRouter);
 
 module.exports = router
+
+/* 
+routes
+
+login - (POST) - localhost:2000/login
+register - (POST) -localhost:2000/register
+
+you can add the route to find the incoming jwt is valid or not
+
+router.get("/getUser",fetchUser,getUser);
+
+getUser -(GET) -localhost:2000/register
+
+*/
