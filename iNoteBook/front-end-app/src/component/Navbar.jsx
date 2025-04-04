@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -56,18 +57,18 @@ const Navbar = () => {
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
-                                <a href="#" className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">
+                                <Link to="#" className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">
                                     Dashboard
-                                </a>
-                                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                </Link>
+                                <Link to="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                                     Team
-                                </a>
-                                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                </Link>
+                                <Link to="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                                     Projects
-                                </a>
-                                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                </Link>
+                                <Link to="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                                     Calendar
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -113,15 +114,15 @@ const Navbar = () => {
                                     aria-orientation="vertical"
                                     aria-labelledby="user-menu-button"
                                 >
-                                    <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem">
+                                    <Link to="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem">
                                         Your Profile
-                                    </a>
-                                    <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem">
+                                    </Link>
+                                    <Link to="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem">
                                         Settings
-                                    </a>
-                                    <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem">
+                                    </Link>
+                                    <Link to="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem">
                                         Sign out
-                                    </a>
+                                    </Link>
                                 </div>
                             )}
                         </div>
@@ -133,18 +134,18 @@ const Navbar = () => {
             {isMobileMenuOpen && (
                 <div className="sm:hidden" id="mobile-menu">
                     <div className="space-y-1 px-2 pt-2 pb-3">
-                        <a href="#" className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">
+                        <Link to="#" className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">
                             Dashboard
-                        </a>
-                        <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                        </Link>
+                        <Link to="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                             Team
-                        </a>
-                        <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                        </Link>
+                        <Link to="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                             Projects
-                        </a>
-                        <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                        </Link>
+                        <Link to="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                             Calendar
-                        </a>
+                        </Link>
                     </div>
                 </div>
             )}
